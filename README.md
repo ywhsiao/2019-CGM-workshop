@@ -29,6 +29,7 @@ Basic linux command
 
 ### Let's look at the folder structure
 
+
 ```bash
 /home/stu#/ywh/
 ├── align
@@ -60,7 +61,7 @@ Basic linux command
 
 ```bash
 [stu#@localhost ~]$ pwd
-/home/train2019/stu##
+/home/train2019/stu#/
 [stu#@localhost ~]$ ls
 cc  qy  train2019_cc.sh  train2019_qy.sh  train2019_ywh.sh  ywh
 [stu#@localhost ~]$ . train2019_ywh.sh
@@ -98,17 +99,17 @@ cc  qy  train2019_cc.sh  train2019_qy.sh  train2019_ywh.sh  ywh
 ##### step3-3: re-estimate the abundance
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ stringtie -e -B -G quan/stringtie_merged.gtf -o quan/ERR188428/ERR188428_chrX.gtf align/ERR188428_chrX.bam
-(train2019_rna) [stu##@localhost ywh]$ head -n 5 quan/ERR188428/ERR188428_chrX.gtf
+(train2019_rna) [stu#@localhost ywh]$ stringtie -e -B -G quan/stringtie_merged.gtf -o quan/ERR188428/ERR188428_chrX.gtf align/ERR188428_chrX.bam
+(train2019_rna) [stu#@localhost ywh]$ head -n 5 quan/ERR188428/ERR188428_chrX.gtf
 ```
 
 ### step4: differential expression analysis
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ cript /home/train2019/ywh/RNA-seq/DEanalysis_new.R
+(train2019_rna) [stu#@localhost ywh]$ cript /home/train2019/ywh/RNA-seq/DEanalysis_new.R
 ```
 
-#### Rscript: DEanalysis_new.R
+### Rscript: DEanalysis_new.R
 
 ```R
 library(ballgown)
