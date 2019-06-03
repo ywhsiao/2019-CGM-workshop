@@ -138,6 +138,24 @@ fpkm_summary <- texpr(bg_chrX, meas='all')
 write.csv(fpkm_summary, "de/FPKM_summary.csv",row.names=FALSE)
 ```
 
+## Network analysis
+
+- at gene level using GeneMANIA [[GeneMANIA]](https://genemania.org/)
+- at protein level using STRING [[STRING]](https://string-db.org/)
+
+## pathway analysis
+
+- DAVID Bioinformatics Resources 6.8 [[DAVID]](https://david.ncifcrf.gov/home.jsp)
+
+## Sofeware requirement
+
+* [SAMtools](http://samtools.sourceforge.net/)
+* [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
+* [StringTie](https://ccb.jhu.edu/software/stringtie/)
+* [Bioconductor-ballgown](https://www.bioconductor.org/packages/release/bioc/html/ballgown.html)
+
+
+
 
 
 
