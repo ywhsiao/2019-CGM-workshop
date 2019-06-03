@@ -1,4 +1,4 @@
-# 2019 CGM Advanced Statistic Analysis Workshop_RNA-seq data analysis
+# 2019 CGM Advanced Statistic Analysis Workshop: RNA-seq data analysis
 
 Center of Genomic and Pecision Medicine, National Taiwan University
 
@@ -7,9 +7,9 @@ Taipei, Taiwan
 04/06/2019 (Tuesday, 13:30-14:50)  
 
 ## Outline
-- RNA-seq data analysis [[Slides]](https://www.dropbox.com/s/xypfvrf2t297v23/RNA-seq_workshop_2019_yiwen.pdf?dl=0)
-- Network analysis (gene-level & protein-level)
-- Pathway analysis using David
+- RNA-seq data analysis [[Slides]](https://www.dropbox.com/sh/coiceg5hus3hd2i/AAC05Z8QTOfyWJOGsIOiQl3Ha?dl=0)
+- Webtools for network analysis (gene-level & protein-level)
+- Webtool for pathway analysis (DAVID)
 
 ## Let's Get started
 
