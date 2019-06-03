@@ -140,8 +140,8 @@ write.csv(fpkm_summary, "de/FPKM_summary.csv",row.names=FALSE)
 
 ## Network analysis
 
-- at gene level using GeneMANIA [[GeneMANIA]](https://genemania.org/)
-- at protein level using STRING [[STRING]](https://string-db.org/)
+- at gene level using [[GeneMANIA]](https://genemania.org/)
+- at protein level using [[STRING]](https://string-db.org/)
 
 ## pathway analysis
 
