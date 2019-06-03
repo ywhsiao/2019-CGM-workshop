@@ -1,7 +1,9 @@
 # 2019 CGM Advanced Statistic Analysis Workshop_RNA-seq data analysis
 
 Center of Genomic and Pecision Medicine, National Taiwan University
+
 Taipei, Taiwan
+
 04/06/2019 (Tuesday, 13:30-14:50)  
 
 ## Outline
@@ -13,14 +15,14 @@ Taipei, Taiwan
 
 ### Login using the username assigned to you
 ```
-ssh stu##@140.112.136.19
-stu##@140.112.136.19's password:train
+ssh stu#@140.112.136.19
+stu#@140.112.136.19's password:train
 ```
 
 ### Environment and home directory
 Basic linux command
-- **You should be in your home directory after login**
-- **Type `pwd` and get the current path**
+- **You should be in your home directory `~/` after login**
+- **Type `pwd` and obtain the current path**
 - **Change directory to ywh `cd ywh/` and `ls` to list the contents in the folder**
 
 ## RNA-seq data analysis
@@ -28,7 +30,7 @@ Basic linux command
 ### Let's look at the folder structure
 
 ```bash
-/home/stu##/ywh/
+/home/stu#/ywh/
 ├── align
 │   ├── ERR188428_chrX.bam
 │   ├── ERR188428_chrX.sam
@@ -57,40 +59,40 @@ Basic linux command
 #### Warm-up
 
 ```bash
-[stu##@localhost ~]$ pwd
+[stu#@localhost ~]$ pwd
 /home/train2019/stu##
-[stu##@localhost ~]$ ls
+[stu#@localhost ~]$ ls
 cc  qy  train2019_cc.sh  train2019_qy.sh  train2019_ywh.sh  ywh
-[stu##@localhost ~]$ . train2019_ywh.sh
-(train2019_rna) [stu##@localhost ~]$ cd ywh/
-(train2019_rna) [stu##@localhost ywh]$ mkdir align quan de
+[stu#@localhost ~]$ . train2019_ywh.sh
+(train2019_rna) [stu#@localhost ~]$ cd ywh/
+(train2019_rna) [stu#@localhost ywh]$ mkdir align quan de
 ```
 
 #### Step 1: Spliced alignment using HISAT2
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ hisat2 --dta -x /home/train2019/ywh/RNA-seq/ref/chrX_tran -1 /home/train2019/ywh/RNA-seq/raw/ERR188428_chrX_1.fastq.gz -2 /home/train2019/ywh/RNA-seq/raw/ERR188428_chrX_2.fastq.gz -S align/ERR188428_chrX.sam 2> align/ERR188428_chrX_summarymetric.txt
-(train2019_rna) [stu##@localhost ywh]$ cat align/ERR188428_chrX_summarymetric.txt
+(train2019_rna) [stu#@localhost ywh]$ hisat2 --dta -x /home/train2019/ywh/RNA-seq/ref/chrX_tran -1 /home/train2019/ywh/RNA-seq/raw/ERR188428_chrX_1.fastq.gz -2 /home/train2019/ywh/RNA-seq/raw/ERR188428_chrX_2.fastq.gz -S align/ERR188428_chrX.sam 2> align/ERR188428_chrX_summarymetric.txt
+(train2019_rna) [stu#@localhost ywh]$ cat align/ERR188428_chrX_summarymetric.txt
 ```
 
 #### Step 2: Conversion to sorted BAM files using SAMtools
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ samtools sort -@ 1 -o align/ERR188428_chrX.bam align/ERR188428_chrX.sam
+(train2019_rna) [stu#@localhost ywh]$ samtools sort -@ 1 -o align/ERR188428_chrX.bam align/ERR188428_chrX.sam
 ```
 
 #### Step 3: Transcript assembly and quantification using StringTie
 ##### Step3-1: assemble transcripts for each sample
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ stringtie -G /home/train2019/ywh/RNA-seq/ref/chrX.gtf -o quan/ERR188428_chrX.gtf -l ERR188428_chrX align/ERR188428_chrX.bam
+(train2019_rna) [stu#@localhost ywh]$ stringtie -G /home/train2019/ywh/RNA-seq/ref/chrX.gtf -o quan/ERR188428_chrX.gtf -l ERR188428_chrX align/ERR188428_chrX.bam
 ```
 
 ##### step3-2: merge transcripts for all samples
 
 ```bash
-(train2019_rna) [stu##@localhost ywh]$ find /home/train2019/ywh/RNA-seq/quan/*.gtf > quan/mergelist.txt
-(train2019_rna) [stu##@localhost ywh]$ stringtie --merge -G /home/train2019/ywh/RNA-seq/ref/chrX.gtf -o quan/stringtie_merged.gtf quan/mergelist.txt
+(train2019_rna) [stu#@localhost ywh]$ find /home/train2019/ywh/RNA-seq/quan/*.gtf > quan/mergelist.txt
+(train2019_rna) [stu#@localhost ywh]$ stringtie --merge -G /home/train2019/ywh/RNA-seq/ref/chrX.gtf -o quan/stringtie_merged.gtf quan/mergelist.txt
 ```
 
 ##### step3-3: re-estimate the abundance
