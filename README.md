@@ -17,6 +17,7 @@ Taipei, Taiwan
 ```
 ssh stu#@train2019.cgm.ntu.edu.tw (# = desk number; e.g.53)
 stu#@train2019.cgm.ntu.edu.tw's password:train
+[stu#@localhost ~]$
 ```
 
 ### Environment and home directory
