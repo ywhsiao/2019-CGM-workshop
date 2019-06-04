@@ -15,7 +15,7 @@ Taipei, Taiwan
 
 ### Login using the username assigned to you
 ```
-ssh stu#@140.112.136.19
+ssh stu#@train2019.cgm.ntu.edu.tw (# = desk number; e.g.53)
 stu#@140.112.136.19's password:train
 ```
 
