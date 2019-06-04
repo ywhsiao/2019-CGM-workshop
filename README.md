@@ -143,7 +143,7 @@ write.csv(fpkm_summary, "de/FPKM_summary.csv",row.names=FALSE)
 - at gene level using [[GeneMANIA]](https://genemania.org/)
 - at protein level using [[STRING]](https://string-db.org/)
 
-## pathway analysis
+## Pathway analysis
 
 - DAVID Bioinformatics Resources 6.8 [[DAVID]](https://david.ncifcrf.gov/home.jsp)
 
