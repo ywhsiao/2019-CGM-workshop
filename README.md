@@ -107,7 +107,7 @@ cc  qy  train2019_cc.sh  train2019_qy.sh  train2019_ywh.sh  ywh
 ### step4: differential expression analysis
 
 ```bash
-(train2019_rna) [stu#@localhost ywh]$ cript /home/train2019/ywh/RNA-seq/DEanalysis_new.R
+(train2019_rna) [stu#@localhost ywh]$ Rscript /home/train2019/ywh/RNA-seq/DEanalysis_new.R
 ```
 
 ### Rscript: DEanalysis_new.R
